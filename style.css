@@ -1,0 +1,412 @@
+
+/* ---------- Base styles ---------- */
+
+:root {
+    color-scheme: dark;
+    --page-bg: #0b1120;
+    --card-bg: #101827;
+    --text: #f8fafc;
+    --muted: #a8b3c7;
+    --accent: #f5a623;
+    --border: rgba(255, 255, 255, 0.11);
+    --icon-bg: rgba(255, 255, 255, 0.06);
+    --shadow: rgba(0, 0, 0, 0.35);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+    background:
+        radial-gradient(ellipse at 15% 15%, #1b2b46 0%, transparent 45%),
+        var(--page-bg);
+    color: var(--text);
+    display: grid;
+    place-items: center;
+    padding: 32px 18px;
+    transition: background 0.3s, color 0.3s;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    font: inherit;
+}
+
+a {
+    color: inherit;
+}
+
+/* ---------- Main layout ---------- */
+
+.page-container {
+    width: 100%;
+    max-width: 940px;
+}
+
+.profile-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    align-items: center;
+    gap: 40px;
+    padding: 48px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    box-shadow: 0 28px 80px var(--shadow);
+    overflow: hidden;
+    isolation: isolate;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.profile-card::before {
+    content: "";
+    position: absolute;
+    top: -120px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.06;
+    filter: blur(60px);
+    z-index: -1;
+}
+
+/* ---------- Theme button ---------- */
+
+.theme-toggle {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--icon-bg);
+    color: var(--text);
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.theme-toggle:hover {
+    transform: rotate(15deg);
+    background: var(--accent);
+    color: #101827;
+}
+
+/* ---------- Profile content ---------- */
+
+.profile-content {
+    min-width: 0;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(245, 166, 35, 0.5);
+}
+
+.profile-content h1 {
+    font-size: clamp(30px, 4vw, 43px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.8px;
+    margin-bottom: 13px;
+}
+
+.profile-content h1 span {
+    color: var(--accent);
+}
+
+.role {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 17px;
+}
+
+.role span {
+    color: var(--accent);
+    padding: 0 4px;
+}
+
+.description {
+    max-width: 390px;
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--muted);
+}
+
+.brand-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    transition: gap 0.2s;
+}
+
+.brand-link:hover {
+    gap: 15px;
+}
+
+.divider {
+    height: 1px;
+    background: var(--border);
+    margin: 28px 0 21px;
+}
+
+.social-heading {
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    margin-bottom: 15px;
+}
+
+/* ---------- Social icons ---------- */
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.social-links a {
+    display: grid;
+    place-items: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 13px;
+    background: var(--icon-bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 17px;
+    text-decoration: none;
+    transition:
+        transform 0.22s ease,
+        background 0.22s ease,
+        color 0.22s ease;
+}
+
+.social-links a:hover {
+    background: var(--accent);
+    color: #101827;
+    transform: translateY(-4px);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+/* ---------- Footer and copy button ---------- */
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 27px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.copy-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 13px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: transparent;
+    color: var(--text);
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.copy-button:hover {
+    background: var(--accent);
+    color: #101827;
+}
+
+.copy-message {
+    min-height: 18px;
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--accent);
+}
+
+/* ---------- Profile image ---------- */
+
+.profile-image {
+    position: relative;
+    height: 340px;
+    border-radius: 22px;
+    overflow: hidden;
+    background: #202c3d;
+    border: 1px solid var(--border);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.profile-image:hover img {
+    transform: scale(1.045);
+}
+
+.image-caption {
+    position: absolute;
+    inset: auto 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 36px 18px 18px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.82));
+}
+
+.image-caption span:first-child {
+    color: white;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.image-caption span:last-child {
+    color: #e5e7eb;
+    font-size: 11px;
+}
+
+/* ---------- Page footer ---------- */
+
+.page-note {
+    text-align: center;
+    margin-top: 22px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* ---------- Light theme ---------- */
+
+body.light-theme {
+    color-scheme: light;
+    --page-bg: #f2f4f8;
+    --card-bg: #ffffff;
+    --text: #182235;
+    --muted: #647084;
+    --accent: #bd7600;
+    --border: rgba(24, 34, 53, 0.12);
+    --icon-bg: #f0f2f6;
+    --shadow: rgba(31, 41, 55, 0.12);
+}
+
+body.light-theme {
+    background:
+        radial-gradient(ellipse at 15% 15%, #fff0ce 0%, transparent 45%),
+        var(--page-bg);
+}
+
+/* ---------- Responsive design ---------- */
+
+@media (max-width: 720px) {
+    body {
+        padding: 22px 14px;
+    }
+
+    .profile-card {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 30px 24px;
+        border-radius: 23px;
+    }
+
+    .profile-content {
+        order: 2;
+    }
+
+    .profile-image {
+        order: 1;
+        width: 100%;
+        max-width: 270px;
+        height: 270px;
+        margin: 0 auto;
+        border-radius: 20px;
+    }
+
+    .theme-toggle {
+        top: 16px;
+        right: 16px;
+        z-index: 2;
+    }
+
+    .profile-content h1 {
+        font-size: clamp(29px, 7vw, 38px);
+    }
+
+    .description {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .profile-card {
+        padding: 25px 18px;
+    }
+
+    .social-links {
+        gap: 8px;
+    }
+
+    .social-links a {
+        width: 39px;
+        height: 39px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}

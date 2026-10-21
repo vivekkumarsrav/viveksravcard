@@ -1,213 +1,144 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vivekkumarsrav profile webcard</title>
-    <meta name="description" content="Webcard of Vivek K. SRAV. AI, Web Development, Technology, Projects and Innovation, vivekkumarsrav is made it | founder of Vishept.">
-    <meta name="google-site-verification" content="THwd0T8BZAk3-2Z1FJiVkLfGyK24ch-OY8yPiNjxQlM" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+    <meta name="description"
+          content="Official profile of Vivek K. SRAV. Explore my technology journey, projects and social profiles.">
 
-        body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #fdecba, #fff4c8);
-            padding: 20px;
-        }
+    <meta name="theme-color" content="#101827">
+    <link rel="canonical" href="https://vivekkumarsrav.github.io/">
 
+    <title>Vivek K. SRAV | Personal Profile</title>
 
-        .profile-card {
-            width: 850px;
-            height: 340px;
-            background: orange;
-            background: linear-gradient(135deg, #ffebaf, #ffe299);
-            border-radius: 20px;
-            padding: 35px;
-            display: flex;
-            gap: 30px;
-            align-items: center;
-            box-shadow: 1px 1px 15px 1px rgb(0, 0, 0);
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        .profile-card:hover {
-            box-shadow: 1px 1px 25px 1px rgb(26, 25, 25);
-            background: linear-gradient(135deg, #ffe299, #ffebaf);
-            transform: 0.2s;
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
 
-        }
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-
-        .left-section {
-            flex: 1;
-            color: white;
-        }
-
-        .left-section h1 {
-            font-size: 38px;
-            margin-bottom: 20px;
-            color: #292929;
-        }
-
-        .left-section p {
-            font-size: 18px;
-            line-height: 1.5;
-            color: #424242;
-            margin-bottom: 8px;
-            text-align: left;
-        }
-        #vpt{
-            text-decoration: none;
-            color: #424242;
-        }
-        #vpt:hover{
-            color: black;
-        }
-
-
-        .social-icons {
-            margin-top: 30px;
-            display: flex;
-            gap: 12px;
-            
-        }
-
-        .social-icons a {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            background: rgba(19, 19, 19, 0.772);
-            color: white;
-            font-size: 20px;
-            transition: 0.2s;
-        }
-
-        .social-icons a:hover {
-            background: orange;
-            box-shadow: 0.5px 1px 18px 1px black;
-            transform: translateY(-5px);
-        }
-
-        .right-section {
-            width: 240px;
-            height: 280px;
-            border-radius: 30px;
-            overflow: hidden;
-            border: 2px solid black;
-        }
-
-        .right-section img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .right-section img:hover {
-            transform: translate3d(-5px);
-        }
-
-        #vks {
-            font-family: sans-serif;
-            font-weight: bold;
-            color: #6a4d02;
-            width: 25ch;
-            text-wrap: nowrap;
-            overflow: hidden;
-            animation: typing 3s steps(20) infinite alternate-reverse;
-        }
-
-        @keyframes typing {
-            from {
-                width: 0;
-
-            }
-        }
-
-
-        @media(max-width:768px) {
-
-            .profile-card {
-                flex-direction: column-reverse;
-                text-align: center;
-                width: 100%;
-                height: 600px;
-            }
-
-            
-
-            .social-icons {
-                justify-content: center;
-            }
-
-            .right-section {
-                width: 220px;
-                height: 220px;
-            }
-
-            .left-section h1 {
-                font-size: 30px;
-            }
-
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
+    <main class="page-container">
 
-    <div class="profile-card">
-        <div class="left-section">
-            <h1>Vivek K. SRAV</h1>
-            <p>
-                <samp title="Pesuing Bachelor of Computer Application from Patna Session: 2025-28">BCA Student</samp> • Web Developer • Founder of <samp title="Vishept is Software sevice based Agency"><a title="Visit" id="vpt" href="https://yt.openinapp.co/xvghe" target="_blank">Vishept</a></samp>
-                Building digital solutions and growing my tech journey step by step.
-            </p>
-            <p id="vks">Grow with Vivek K. SRAV</p>
+        <article class="profile-card">
 
+            <button class="theme-toggle"
+                    id="themeToggle"
+                    type="button"
+                    aria-label="Switch to light theme"
+                    title="Toggle theme">
+                <i class="fa-solid fa-sun" aria-hidden="true"></i>
+            </button>
 
-            <div class="social-icons">
-                <a href="https://www.youtube.com/@vivekkumar-srav" target="_blank" title="Facebook">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://www.instagram.com/vivekkumarsrav/" target="_blank" title="Facebook">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.facebook.com/vivekkumarsrav/" target="_blank" title="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://x.com/vivekkumarsrav/" target="_blank" title="Facebook">
-                    <i class="fab fa-x-twitter"></i>
+            <div class="profile-content">
+
+                <div class="eyebrow">
+                    <span class="status-dot"></span>
+                    PERSONAL PROFILE
+                </div>
+
+                <h1>Vivek K. <span>SRAV</span></h1>
+
+                <p class="role">
+                    BCA Student <span>•</span> Web Developer
+                </p>
+
+                <p class="description">
+                    Building digital projects, exploring technology
+                    and growing my skills one step at a time.
+                </p>
+
+                <a class="brand-link"
+                   href="https://www.linkedin.com/in/vivekkumarsrav/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <span>My journey in technology</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"
+                       aria-hidden="true"></i>
                 </a>
 
-                <a href="https://github.com/vivekkumarsrav" target="_blank" title="Facebook">
-                    <i class="fab fa-github"></i>
-                </a>
+                <div class="divider"></div>
 
-                <a href="https://www.linkedin.com/in/vivekkumarsrav/" target="_blank" title="Facebook">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
+                <p class="social-heading">CONNECT WITH ME</p>
+
+                <nav class="social-links" aria-label="Social media profiles">
+
+                    <a href="https://www.youtube.com/@vivekkumar-srav"
+                       target="_blank" rel="noopener noreferrer"
+                       aria-label="YouTube" title="YouTube">
+                        <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/vivekkumarsrav/"
+                       target="_blank" rel="noopener noreferrer"
+                       aria-label="Instagram" title="Instagram">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/vivekkumarsrav/"
+                       target="_blank" rel="noopener noreferrer"
+                       aria-label="Facebook" title="Facebook">
+                        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+
+                    <a href="https://x.com/vivekkumarsrav"
+                       target="_blank" rel="noopener noreferrer"
+                       aria-label="X" title="X">
+                        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                    </a>
+
+                    <a href="https://github.com/vivekkumarsrav"
+                       target="_blank" rel="noopener noreferrer"
+                       aria-label="GitHub" title="GitHub">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/vivekkumarsrav/"
+                       target="_blank" rel="noopener noreferrer"
+                       aria-label="LinkedIn" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                    </a>
+
+                </nav>
+
+                <div class="card-footer">
+                    <span>Learn. Build. Improve.</span>
+
+                    <button id="copyButton" class="copy-button" type="button">
+                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                        <span>Copy profile link</span>
+                    </button>
+                </div>
+
+                <p id="copyMessage" class="copy-message"
+                   role="status" aria-live="polite"></p>
+
             </div>
-        </div>
-        
-        <div class="right-section">
-            <img src="vivekkumar-srav.jpg" alt="Vivek K. SRAV photo">
-        </div>
 
-    </div>
+            <div class="profile-image">
+                <img src="vivekkumarsrav.png"
+                     alt="Portrait of Vivek K. SRAV"
+                     fetchpriority="high">
 
+                <div class="image-caption">
+                    <span>VIVEK K. SRAV</span>
+                    <span>Personal Brand</span>
+                </div>
+            </div>
+
+        </article>
+
+        <p class="page-note">A little progress every day adds up.</p>
+
+    </main>
 </body>
-
 </html>
